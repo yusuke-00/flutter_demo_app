@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutterデモアプリ"),
+        title: Text("Flutterデモ練習アプリ"),
         actions: <Widget>[Icon(Icons.add), Icon(Icons.share)],
       ),
       body: Center(
