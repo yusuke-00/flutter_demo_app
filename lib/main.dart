@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_app/grid_view_page.dart';
 import 'package:flutter_demo_app/next_page.dart';
+import 'package:flutter_demo_app/provider_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -97,6 +98,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
+            RaisedButton(
+              child: Text("Providerパターンの勉強"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProviderPage()),
+                );
+              },
+            )
           ],
         ),
       ),
