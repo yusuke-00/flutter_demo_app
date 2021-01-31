@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo_app/book_list_page.dart';
 import 'package:flutter_demo_app/main_model.dart';
 import 'package:provider/provider.dart';
 
@@ -29,6 +30,15 @@ class ProviderPage extends StatelessWidget {
                     }
                     //押されたら反応する様にする
                     ),
+                RaisedButton(
+                  child: Text("ブックリストページ"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BookListPage()),
+                    );
+                  },
+                ),
               ],
             );
           }),
