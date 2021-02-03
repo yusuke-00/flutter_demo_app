@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo_app/book_list_page.dart';
-import 'package:flutter_demo_app/main_model.dart';
+import 'package:flutter_demo_app/presentation/book_list/book_list_page.dart';
+import 'package:flutter_demo_app/presentation/main/main_model.dart';
 import 'package:provider/provider.dart';
 
 class ProviderPage extends StatelessWidget {
