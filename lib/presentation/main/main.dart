@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_app/grid_view_page.dart';
+import 'package:flutter_demo_app/login/login_page.dart';
 import 'package:flutter_demo_app/next_page.dart';
 import 'package:flutter_demo_app/provider_page.dart';
+import 'package:flutter_demo_app/signup/signup_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -105,7 +107,25 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => ProviderPage()),
                 );
               },
-            )
+            ),
+            RaisedButton(
+              child: Text("新規登録"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("ログイン"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
