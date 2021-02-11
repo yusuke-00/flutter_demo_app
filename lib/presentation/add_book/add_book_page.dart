@@ -31,7 +31,7 @@ class AddBookPage extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       SizedBox(
                         width: 100,
                         height: 160,
@@ -91,6 +91,7 @@ class AddBookPage extends StatelessWidget {
       await model.updateBook(book);
       showDialog(
         context: context,
+        // ignore: non_constant_identifier_names
         builder: (BuildContext) {
           return AlertDialog(
             title: Text("更新しました！"),
@@ -109,6 +110,7 @@ class AddBookPage extends StatelessWidget {
     } catch (e) {
       await showDialog(
         context: context,
+        // ignore: non_constant_identifier_names
         builder: (BuildContext) {
           return AlertDialog(
             title: Text(e.toString()),
@@ -131,6 +133,7 @@ class AddBookPage extends StatelessWidget {
       await model.addBookToFirebase();
       showDialog(
         context: context,
+        // ignore: non_constant_identifier_names
         builder: (BuildContext) {
           return AlertDialog(
             title: Text("保存しました！"),
@@ -149,6 +152,7 @@ class AddBookPage extends StatelessWidget {
     } catch (e) {
       showDialog(
         context: context,
+        // ignore: non_constant_identifier_names
         builder: (BuildContext) {
           return AlertDialog(
             title: Text(e.toString()),

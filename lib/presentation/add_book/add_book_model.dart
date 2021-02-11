@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_app/domain/book.dart';
 import 'package:image_picker/image_picker.dart';
@@ -57,6 +58,7 @@ class AddBookModel extends ChangeNotifier {
   }
 
   Future<String> _uploadImage() async {
+    final storage = FirebaseStorage.instance;
     return "https://pbs.twimg.com/media/En7cJh5VoAA0ShH?format=jpg&name=large";
   }
 }

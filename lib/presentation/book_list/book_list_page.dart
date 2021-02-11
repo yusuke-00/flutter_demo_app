@@ -18,11 +18,11 @@ class BookListPage extends StatelessWidget {
         body: Consumer<BookListModel>(
           builder: (context, model, child) {
             final books = model.books;
+            // ignore: non_constant_identifier_names
             final ListTiles = books
                 .map(
                   (book) => ListTile(
-                    leading: Image.network(
-                        "https://pbs.twimg.com/media/En7cJh5VoAA0ShH?format=jpg&name=medium"),
+                    leading: Image.network(book.imageURL), //画像表示できる
                     title: Text(book.title),
                     trailing: IconButton(
                       icon: Icon(Icons.edit),
@@ -69,7 +69,7 @@ class BookListPage extends StatelessWidget {
           },
         ),
         floatingActionButton: Consumer<BookListModel>(
-          builder: (context, model, child) {
+          builder: (contex, model, child) {
             return FloatingActionButton(
               child: Icon(Icons.add),
               onPressed: () async {
@@ -107,12 +107,13 @@ class BookListPage extends StatelessWidget {
     }
   }
 
+  // ignore: missing_return
   Future _showDialog(
     BuildContext context,
     String title,
     Book book,
   ) {
-    showDialog(
+    return showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(

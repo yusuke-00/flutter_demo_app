@@ -69,12 +69,13 @@ class LoginPage extends StatelessWidget {
     );
   }
 
+  // ignore: missing_return
   Future _showDialog(
     BuildContext context,
     String title,
     Book book,
   ) {
-    showDialog(
+    return showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
