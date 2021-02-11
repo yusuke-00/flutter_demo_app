@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_app/domain/book.dart';
@@ -22,6 +21,8 @@ class BookListPage extends StatelessWidget {
             final ListTiles = books
                 .map(
                   (book) => ListTile(
+                    leading: Image.network(
+                        "https://pbs.twimg.com/media/En7cJh5VoAA0ShH?format=jpg&name=medium"),
                     title: Text(book.title),
                     trailing: IconButton(
                       icon: Icon(Icons.edit),

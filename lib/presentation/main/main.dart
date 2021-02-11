@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo_app/grid_view_page.dart';
 import 'package:flutter_demo_app/login/login_page.dart';
 import 'package:flutter_demo_app/next_page.dart';
+import 'package:flutter_demo_app/presentation/book_list/book_list_page.dart';
 import 'package:flutter_demo_app/provider_page.dart';
 import 'package:flutter_demo_app/signup/signup_page.dart';
 
@@ -123,6 +124,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("本一覧"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BookListPage()),
                 );
               },
             ),
